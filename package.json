@@ -1,0 +1,22 @@
+{
+  "name": "@superbalist/js-pubsub",
+  "version": "0.0.1",
+  "description": "A JS abstraction for the pub-sub pattern",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Superbalist/js-pubsub.git"
+  },
+  "keywords": [
+    "pubsub"
+  ],
+  "author": "Superbalist.com a division of Takealot Online (Pty)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Superbalist/js-pubsub/issues"
+  },
+  "homepage": "https://github.com/Superbalist/js-pubsub#readme"
+}

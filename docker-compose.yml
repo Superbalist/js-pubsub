@@ -1,0 +1,7 @@
+version: '2'
+services:
+  js-pubsub:
+    build: .
+    volumes:
+      - ./src:/usr/src/app/src
+      - ./examples:/usr/src/app/examples
