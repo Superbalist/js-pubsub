@@ -17,7 +17,7 @@ npm install @superbalist/js-pubsub
 
 * Local (bundled)
 * /dev/null (bundled)
-* Redis - **pending**
+* Redis - https://github.com/Superbalist/js-pubsub-redis
 * Google Cloud - **pending**
 
 ## Usage
