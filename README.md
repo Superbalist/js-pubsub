@@ -20,6 +20,12 @@ npm install @superbalist/js-pubsub
 * Redis - https://github.com/Superbalist/js-pubsub-redis
 * Google Cloud - https://github.com/Superbalist/js-pubsub-google-cloud
 
+## Integrations
+
+Want to get started quickly? Check out some of these integrations:
+
+* [js-pubsub-manager](https://github.com/Superbalist/js-pubsub-manager) - A factory and manager with multi adapter support.
+
 ## Usage
 
 ```node
