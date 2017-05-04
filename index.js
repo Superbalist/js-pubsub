@@ -1,8 +1,10 @@
-"use strict";
+'use strict';
 
-var DevNullPubSubAdapter = require('./src/DevNullPubSubAdapter');
-var LocalPubSubAdapter = require('./src/LocalPubSubAdapter');
-var Utils = require('./src/Utils');
+/** @module js-pubsub */
+
+let DevNullPubSubAdapter = require('./src/DevNullPubSubAdapter');
+let LocalPubSubAdapter = require('./src/LocalPubSubAdapter');
+let Utils = require('./src/Utils');
 
 module.exports.DevNullPubSubAdapter = DevNullPubSubAdapter;
 module.exports.LocalPubSubAdapter = LocalPubSubAdapter;
