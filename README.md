@@ -31,7 +31,7 @@ Want to get started quickly? Check out some of these integrations:
 ```node
 "use strict";
 
-var LocalPubSubAdapter = require('@superbalist/js-pubsub').LocalPubSubAdapter;
+let LocalPubSubAdapter = require('@superbalist/js-pubsub').LocalPubSubAdapter;
 
 let adapter = new LocalPubSubAdapter();
 
@@ -47,14 +47,39 @@ adapter.publish('my_channel', 'Hello World!');
 
 ## Writing an Adapter
 
-You can easily write your own custom adapter by implementing the following methods on your class.
+You can easily write your own custom adapter by implementing the [PubSubAdapterInterface](src/PubSubAdapterInterface.js) interface.
 
 ```node
 class CustomAdapter {
+  /**
+   * Subscribe a handler to a channel.
+   *
+   * @param {string} channel
+   * @param {subscriberCallback} handler - The callback to run when a message is received
+   * @example
+   * adapter.subscribe('my_channel', (message) => {
+   *   console.log(message);
+   * });
+   */
   subscribe(channel, handler) {
 
   }
 
+  /**
+   * Publish a message to a channel.
+   *
+   * @param {string} channel
+   * @param {*} message - The message payload
+   * @example
+   * // publish a string
+   * adapter.publish('my_channel', 'Hello World');
+   *
+   * // publish an object
+   * adapter.publish('my_channel', {
+   *   'id': 1234,
+   *   'first_name': 'Matthew',
+   * });
+   */
   publish(channel, message) {
 
   }

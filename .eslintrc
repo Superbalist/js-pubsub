@@ -1,0 +1,15 @@
+{
+  "extends": "google",
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "max-len": ["error", {
+      "ignoreComments": true,
+      "ignoreUrls": true,
+      "ignoreStrings": true,
+      "ignoreRegExpLiterals": true
+    }]
+  }
+}

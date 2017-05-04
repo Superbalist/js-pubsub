@@ -1,14 +1,17 @@
 'use strict';
 
 /**
- * DevNullPubSubAdapter Class
- *
- * @implements {PubSubAdapterInterface}
- * @example
- * // create adapter
- * let adapter = new DevNullPubSubAdapter();
+ * @callback subscriberCallback
+ * @param {*} message - The message payload received
  */
-class DevNullPubSubAdapter {
+
+/**
+ * PubSubAdapterInterface Interface
+ *
+ * @abstract
+ * @interface
+ */
+class PubSubAdapterInterface {
   /**
    * Subscribe a handler to a channel.
    *
@@ -20,7 +23,7 @@ class DevNullPubSubAdapter {
    * });
    */
   subscribe(channel, handler) {
-    // you ain't subscribing to anything
+
   }
 
   /**
@@ -39,8 +42,8 @@ class DevNullPubSubAdapter {
    * });
    */
   publish(channel, message) {
-    // your message is going to /dev/null
+
   }
 }
 
-module.exports = DevNullPubSubAdapter;
+module.exports = PubSubAdapterInterface;
