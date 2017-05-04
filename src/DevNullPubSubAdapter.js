@@ -5,6 +5,8 @@
  *
  * @implements {PubSubAdapterInterface}
  * @example
+ * let DevNullPubSubAdapter = require('@superbalist/js-pubsub').DevNullPubSubAdapter;
+ *
  * // create adapter
  * let adapter = new DevNullPubSubAdapter();
  */

@@ -5,6 +5,8 @@
  *
  * @implements {PubSubAdapterInterface}
  * @example
+ * let LocalPubSubAdapter = require('@superbalist/js-pubsub').LocalPubSubAdapter;
+ *
  * // create adapter
  * let adapter = new LocalPubSubAdapter();
  */
