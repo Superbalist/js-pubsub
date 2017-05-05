@@ -4,7 +4,8 @@
   "description": "A JS abstraction for the pub-sub pattern",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
     "eslint-config-google": "^0.7.1",
+    "istanbul": "^0.4.5",
     "mocha": "^3.3.0",
     "sinon": "^2.2.0"
   }
