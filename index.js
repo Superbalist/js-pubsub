@@ -1,6 +1,6 @@
 'use strict';
 
-/** @module pubsub */
+/** @module @superbalist/js-pubsub */
 
 let PubSubAdapterInterface = require('./src/PubSubAdapterInterface');
 let DevNullPubSubAdapter = require('./src/DevNullPubSubAdapter');
