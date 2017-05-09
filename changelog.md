@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 - 2017-05-09
+
+* Transpile ES6 -> ES5 at build time
+
 ## 1.0.0 - 2017-05-08
 
 * Switch to ESLint & Google Javascript Style Guide

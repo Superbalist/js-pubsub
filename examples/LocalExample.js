@@ -1,6 +1,6 @@
 'use strict';
 
-let LocalPubSubAdapter = require('../src/LocalPubSubAdapter');
+let LocalPubSubAdapter = require('../lib/LocalPubSubAdapter');
 
 let adapter = new LocalPubSubAdapter();
 

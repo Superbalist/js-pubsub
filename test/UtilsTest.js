@@ -1,7 +1,7 @@
 'use strict';
 
 let expect = require('chai').expect;
-let Utils = require('../src/Utils');
+let Utils = require('../lib/Utils');
 
 describe('Utils', () => {
   describe('unserializeMessagePayload', () => {

@@ -2,7 +2,7 @@
 
 let expect = require('chai').expect;
 let sinon = require('sinon');
-let LocalPubSubAdapter = require('../src/LocalPubSubAdapter');
+let LocalPubSubAdapter = require('../lib/LocalPubSubAdapter');
 
 describe('LocalPubSubAdapter', () => {
   describe('getSubscribersForChannel', () => {
