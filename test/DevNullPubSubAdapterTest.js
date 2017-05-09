@@ -1,7 +1,7 @@
 'use strict';
 
 let sinon = require('sinon');
-let DevNullPubSubAdapter = require('../src/DevNullPubSubAdapter');
+let DevNullPubSubAdapter = require('../lib/DevNullPubSubAdapter');
 
 describe('DevNullPubSubAdapter', () => {
   describe('subscribe & publish', () => {

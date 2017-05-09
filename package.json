@@ -1,11 +1,13 @@
 {
   "name": "@superbalist/js-pubsub",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A JS abstraction for the pub-sub pattern",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "mocha test",
-    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000"
+    "build": "./node_modules/.bin/babel --presets babel-preset-es2015 --out-dir lib/ src/",
+    "prepublish": "npm run build",
+    "test": "npm run build && mocha test",
+    "coverage": "npm run build && ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,8 @@
   },
   "homepage": "https://github.com/Superbalist/js-pubsub#readme",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
     "eslint-config-google": "^0.7.1",

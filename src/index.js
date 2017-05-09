@@ -2,10 +2,10 @@
 
 /** @module @superbalist/js-pubsub */
 
-let PubSubAdapterInterface = require('./src/PubSubAdapterInterface');
-let DevNullPubSubAdapter = require('./src/DevNullPubSubAdapter');
-let LocalPubSubAdapter = require('./src/LocalPubSubAdapter');
-let Utils = require('./src/Utils');
+let PubSubAdapterInterface = require('./PubSubAdapterInterface');
+let DevNullPubSubAdapter = require('./DevNullPubSubAdapter');
+let LocalPubSubAdapter = require('./LocalPubSubAdapter');
+let Utils = require('./Utils');
 
 module.exports.PubSubAdapterInterface = PubSubAdapterInterface;
 module.exports.DevNullPubSubAdapter = DevNullPubSubAdapter;

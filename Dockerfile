@@ -10,4 +10,6 @@ RUN npm install
 COPY src /usr/src/app/src/
 COPY examples /usr/src/app/examples/
 
+RUN npm run build
+
 CMD ["/bin/bash"]
