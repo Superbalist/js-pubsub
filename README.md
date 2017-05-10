@@ -4,7 +4,6 @@ A JS abstraction for the pub-sub pattern
 
 [![Author](http://img.shields.io/badge/author-@superbalist-blue.svg?style=flat-square)](https://twitter.com/superbalist)
 [![Build Status](https://img.shields.io/travis/Superbalist/js-pubsub/master.svg?style=flat-square)](https://travis-ci.org/Superbalist/js-pubsub)
-[![Coverage Status](https://coveralls.io/repos/github/Superbalist/js-pubsub/badge.svg?branch=master)](https://coveralls.io/github/Superbalist/js-pubsub?branch=master)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![NPM Version](https://img.shields.io/npm/v/@superbalist/js-pubsub.svg)](https://www.npmjs.com/package/@superbalist/js-pubsub)
 [![NPM Downloads](https://img.shields.io/npm/dt/@superbalist/js-pubsub.svg)](https://www.npmjs.com/package/@superbalist/js-pubsub)
