@@ -7,7 +7,8 @@
     "build": "./node_modules/.bin/babel --presets babel-preset-es2015 --out-dir lib/ src/",
     "prepublish": "npm run build",
     "test": "npm run build && mocha test",
-    "coverage": "npm run build && ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000"
+    "coverage": "npm run build && ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --ui bdd -R spec -t 5000",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
