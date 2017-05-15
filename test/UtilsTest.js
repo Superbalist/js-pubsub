@@ -13,4 +13,13 @@ describe('Utils', () => {
       expect(Utils.unserializeMessagePayload('this is a string')).to.equal('this is a string');
     });
   });
+
+  describe('serializeMessagePayload', () => {
+    it('should serialize an object to json', () => {
+      expect(Utils.serializeMessagePayload('test')).to.equal('"test"');
+      expect(Utils.serializeMessagePayload(true)).to.equal('true');
+      expect(Utils.serializeMessagePayload(1.6)).to.equal('1.6');
+      expect(Utils.serializeMessagePayload({hello: 'world'})).to.equal('{"hello":"world"}');
+    });
+  });
 });

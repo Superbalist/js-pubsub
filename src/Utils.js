@@ -28,6 +28,16 @@ class Utils {
       }
     }
   }
+
+  /**
+   * Serialize a message payload.
+   *
+   * @param {*} payload
+   * @return {string}
+   */
+  static serializeMessagePayload(payload) {
+    return JSON.stringify(payload);
+  }
 }
 
 module.exports = Utils;

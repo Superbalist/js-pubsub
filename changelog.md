@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2 - 2017-05-15
+
+* Add `serializeMessagePayload` method to Utils class
+
 ## 1.0.1 - 2017-05-09
 
 * Transpile ES6 -> ES5 at build time
