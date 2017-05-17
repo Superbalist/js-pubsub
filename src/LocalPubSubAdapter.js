@@ -74,6 +74,24 @@ class LocalPubSubAdapter {
       handler(message);
     }
   }
+
+  /**
+   * Publish multiple messages to a channel.
+   *
+   * @param {string} channel
+   * @param {*[]} messages
+   * @example
+   * let messages = [
+   *   'message 1',
+   *   'message 2',
+   * ];
+   * adapter.publishBatch('my_channel', messages);
+   */
+  publishBatch(channel, messages) {
+    for (let message of messages) {
+      this.publish(channel, message);
+    }
+  }
 }
 
 module.exports = LocalPubSubAdapter;

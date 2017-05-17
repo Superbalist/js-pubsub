@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.0 - 2017-05-17
+
+* Implement new publishBatch method on PubSubAdapterInterface
+
 ## 1.0.2 - 2017-05-15
 
 * Add `serializeMessagePayload` method to Utils class

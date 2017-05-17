@@ -43,6 +43,22 @@ class DevNullPubSubAdapter {
   publish(channel, message) {
     // your message is going to /dev/null
   }
+
+  /**
+   * Publish multiple messages to a channel.
+   *
+   * @param {string} channel
+   * @param {*[]} messages
+   * @example
+   * let messages = [
+   *   'message 1',
+   *   'message 2',
+   * ];
+   * adapter.publishBatch('my_channel', messages);
+   */
+  publishBatch(channel, messages) {
+    // your messages are going to /dev/null
+  }
 }
 
 module.exports = DevNullPubSubAdapter;

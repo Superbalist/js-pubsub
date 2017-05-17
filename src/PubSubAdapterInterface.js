@@ -44,6 +44,22 @@ class PubSubAdapterInterface {
   publish(channel, message) {
 
   }
+
+  /**
+   * Publish multiple messages to a channel.
+   *
+   * @param {string} channel
+   * @param {*[]} messages
+   * @example
+   * let messages = [
+   *   'message 1',
+   *   'message 2',
+   * ];
+   * adapter.publishBatch('my_channel', messages);
+   */
+  publishBatch(channel, messages) {
+
+  }
 }
 
 module.exports = PubSubAdapterInterface;

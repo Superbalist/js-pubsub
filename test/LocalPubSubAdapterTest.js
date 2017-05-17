@@ -66,6 +66,32 @@ describe('LocalPubSubAdapter', () => {
     });
   });
 
+  describe('publishBatch', () => {
+    it('should invoke the handlers listening for messages', () => {
+      let adapter = new LocalPubSubAdapter();
+
+      let handler1 = sinon.spy();
+      adapter.subscribe('test_channel', handler1);
+
+      let handler2 = sinon.spy();
+      adapter.subscribe('test_channel', handler2);
+
+      let messages = [
+        'This is a message sent to handler1 & handler2',
+        'This is another message!',
+      ];
+      adapter.publishBatch('test_channel', messages);
+
+      sinon.assert.calledTwice(handler1);
+      sinon.assert.calledWith(handler1, 'This is a message sent to handler1 & handler2');
+      sinon.assert.calledWith(handler1, 'This is another message!');
+
+      sinon.assert.calledTwice(handler2);
+      sinon.assert.calledWith(handler2, 'This is a message sent to handler1 & handler2');
+      sinon.assert.calledWith(handler2, 'This is another message!');
+    });
+  });
+
   describe('subscribe handlers', () => {
     it('should receive messages as primitive types', () => {
       let adapter = new LocalPubSubAdapter();

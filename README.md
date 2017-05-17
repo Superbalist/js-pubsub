@@ -44,6 +44,13 @@ adapter.subscribe('my_channel', (message) => {
 
 // publish messages
 adapter.publish('my_channel', 'Hello World!');
+
+// publish multiple messages
+let messages = [
+  'message 1',
+  'message 2',
+];
+adapter.publishBatch('my_channel', messages);
 ```
 
 ## Writing an Adapter
@@ -82,6 +89,22 @@ class CustomAdapter {
    * });
    */
   publish(channel, message) {
+
+  }
+
+  /**
+   * Publish multiple messages to a channel.
+   *
+   * @param {string} channel
+   * @param {*[]} messages
+   * @example
+   * let messages = [
+   *   'message 1',
+   *   'message 2',
+   * ];
+   * adapter.publishBatch('my_channel', messages);
+   */
+  publishBatch(channel, messages) {
 
   }
 }
