@@ -1,6 +1,6 @@
 {
   "name": "@superbalist/js-pubsub",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "A JS abstraction for the pub-sub pattern",
   "main": "lib/index.js",
   "scripts": {
