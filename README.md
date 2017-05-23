@@ -20,6 +20,7 @@ npm install @superbalist/js-pubsub
 * /dev/null (bundled)
 * Redis - https://github.com/Superbalist/js-pubsub-redis
 * Google Cloud - https://github.com/Superbalist/js-pubsub-google-cloud
+* REST Proxy - https://github.com/Superbalist/js-pubsub-rest-proxy
 
 ## Integrations
 
