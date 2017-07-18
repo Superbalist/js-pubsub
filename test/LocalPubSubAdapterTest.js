@@ -52,17 +52,24 @@ describe('LocalPubSubAdapter', () => {
       let handler3 = sinon.spy();
       adapter.subscribe('another_channel', handler3);
 
-      adapter.publish('test_channel', 'This is a message sent to handler1 & handler2');
-      adapter.publish('another_channel', 'This is a message which only handler3 will receive');
+      let promises = [];
 
-      sinon.assert.calledOnce(handler1);
-      sinon.assert.calledWith(handler1, 'This is a message sent to handler1 & handler2');
+      promises.push(adapter.publish('test_channel', 'This is a message sent to handler1 & handler2'));
+      promises.push(adapter.publish('another_channel', 'This is a message which only handler3 will receive'));
 
-      sinon.assert.calledOnce(handler2);
-      sinon.assert.calledWith(handler2, 'This is a message sent to handler1 & handler2');
+      return Promise.all(promises).then((results) => {
+        sinon.assert.calledOnce(handler1);
+        sinon.assert.calledWith(handler1, 'This is a message sent to handler1 & handler2');
 
-      sinon.assert.calledOnce(handler3);
-      sinon.assert.calledWith(handler3, 'This is a message which only handler3 will receive');
+        sinon.assert.calledOnce(handler2);
+        sinon.assert.calledWith(handler2, 'This is a message sent to handler1 & handler2');
+
+        sinon.assert.calledOnce(handler3);
+        sinon.assert.calledWith(handler3, 'This is a message which only handler3 will receive');
+
+        expect(results[0]).to.be.null;
+        expect(results[1]).to.be.null;
+      });
     });
   });
 
