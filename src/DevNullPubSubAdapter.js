@@ -30,6 +30,7 @@ class DevNullPubSubAdapter {
    *
    * @param {string} channel
    * @param {*} message - The message payload
+   * @return {Promise<*>}
    * @example
    * // publish a string
    * adapter.publish('my_channel', 'Hello World');
@@ -42,6 +43,7 @@ class DevNullPubSubAdapter {
    */
   publish(channel, message) {
     // your message is going to /dev/null
+    return Promise.resolve(null);
   }
 
   /**
@@ -49,6 +51,7 @@ class DevNullPubSubAdapter {
    *
    * @param {string} channel
    * @param {*[]} messages
+   * @return {Promise<*>}
    * @example
    * let messages = [
    *   'message 1',
@@ -58,6 +61,7 @@ class DevNullPubSubAdapter {
    */
   publishBatch(channel, messages) {
     // your messages are going to /dev/null
+    return Promise.resolve(null);
   }
 }
 

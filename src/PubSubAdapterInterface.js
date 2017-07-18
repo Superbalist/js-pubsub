@@ -31,6 +31,7 @@ class PubSubAdapterInterface {
    *
    * @param {string} channel
    * @param {*} message - The message payload
+   * @return {Promise<*>}
    * @example
    * // publish a string
    * adapter.publish('my_channel', 'Hello World');
@@ -50,6 +51,7 @@ class PubSubAdapterInterface {
    *
    * @param {string} channel
    * @param {*[]} messages
+   * @return {Promise<*>}
    * @example
    * let messages = [
    *   'message 1',

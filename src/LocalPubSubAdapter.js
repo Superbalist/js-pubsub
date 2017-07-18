@@ -59,6 +59,7 @@ class LocalPubSubAdapter {
    *
    * @param {string} channel
    * @param {*} message - The message payload
+   * @return {Promise<*>}
    * @example
    * // publish a string
    * adapter.publish('my_channel', 'Hello World');
@@ -73,6 +74,8 @@ class LocalPubSubAdapter {
     for (let handler of this.getSubscribersForChannel(channel)) {
       handler(message);
     }
+
+    return Promise.resolve(null);
   }
 
   /**
@@ -80,6 +83,7 @@ class LocalPubSubAdapter {
    *
    * @param {string} channel
    * @param {*[]} messages
+   * @return {Promise<*>}
    * @example
    * let messages = [
    *   'message 1',
@@ -91,6 +95,8 @@ class LocalPubSubAdapter {
     for (let message of messages) {
       this.publish(channel, message);
     }
+
+    return Promise.resolve(null);
   }
 }
 
