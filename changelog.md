@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.0.1 - 2021-02-01
+* Dependency Updates
+
 ## 3.0.0 - 2017-07-18
 
 * Change publish and publishBatch methods on PubSubAdapterInterface to return a promise
